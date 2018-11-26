@@ -1,19 +1,11 @@
-dashd-rpc.js
+galactrumd-rpc
 ===============
 
-[![NPM Package](https://img.shields.io/npm/v/dashd-rpc.svg?style=flat-square)](https://www.npmjs.org/package/@dashevo/dashd-rpc)
-[![Build Status](https://img.shields.io/travis/dashevo/dashd-rpc.svg?branch=master&style=flat-square)](https://travis-ci.org/dashevo/dashd-rpc)
-[![Coverage Status](https://img.shields.io/coveralls/dashevo/dashd-rpc.svg?style=flat-square)](https://coveralls.io/r/dashevo/dashd-rpc?branch=master)
-
-A client library to connect to Dash Core RPC in JavaScript.
+A client library to connect to Galactrum RPC in JavaScript.
 
 ## Get Started
 
-dashd-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
-
-```bash
-npm install @dashevo/dashd-rpc
-```
+galactrumd-rpc runs on [node](http://nodejs.org/):
 
 ## RpcClient
 
@@ -23,12 +15,12 @@ Config parameters :
 	- user : (string - optional) - (default: 'user') - Set the user credential.
 	- pass : (string - optional) - (default: 'pass') - Set the password credential.
 	- host : (string - optional) - (default: '127.0.0.1') - The host you want to connect with.
-	- port : (integer - optional) - (default: 9998) - Set the port on which perform the RPC command.
+	- port : (integer - optional) - (default: 6269) - Set the port on which perform the RPC command.
 
 Promise vs callback based
 
-  - `require('bitcoind-rpc-dash/promise')` to have promises returned
-  - `require('bitcoind-rpc-dash')` to have callback functions returned
+  - `require('galacrtumd-rpc/promise')` to have promises returned
+  - `require('galactrumd-rpc')` to have callback functions returned
 	
 ## Examples
 
@@ -36,16 +28,16 @@ Config:
 ```javascript
 var config = {
     protocol: 'http',
-    user: 'dash',
+    user: 'galactrum',
     pass: 'local321',
     host: '127.0.0.1',
-    port: 19998
+    port: 16269
 };
 ```
 
 Promise based:
 ```javascript
-var RpcClient = require('bitcoind-rpc-dash/promise');
+var RpcClient = require('galactrumd-rpc/promise');
 var rpc = new RpcClient(config);
 
 rpc.getRawMemPool()
@@ -66,8 +58,8 @@ rpc.getRawMemPool()
 Callback based (legacy):
 ```javascript
 var run = function() {
-  var bitcore = require('bitcore');
-  var RpcClient = require('bitcoind-rpc-dash');
+  var galactrum-core = require('galactrum-core');
+  var RpcClient = require('galactrumd-rpc');
   var rpc = new RpcClient(config);
 
   var txids = [];
@@ -94,7 +86,7 @@ var run = function() {
         }
 
         rawtxs.map(function (rawtx) {
-          var tx = new bitcore.Transaction(rawtx.result);
+          var tx = new galactrum-core.Transaction(rawtx.result);
           console.log('\n\n\n' + tx.id + ':', tx.toObject());
         });
 
@@ -112,13 +104,13 @@ var run = function() {
 
 You can dynamically access to the help of each method by doing
 ```
-const RpcClient = require('bitcoind-rpc-dash');
+const RpcClient = require('galactrumd-rpc');
 var client = new RPCclient({
     protocol:'http',
-    user: 'dash',
+    user: 'galactrum',
     pass: 'local321', 
     host: '127.0.0.1', 
-    port: 19998
+    port: 16269
 });
 
 var cb = function (err, data) {

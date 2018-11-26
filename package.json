@@ -1,6 +1,6 @@
 {
-  "name": "@dashevo/dashd-rpc",
-  "description": "Dash Client Library to connect to Dash Core (dashd) via RPC",
+  "name": "@GAB5TER/galactrumd-rpc",
+  "description": "Galactrum Client Library to connect to Galactrum (galactrumd) via RPC",
   "version": "1.2.1",
   "author": {
     "name": "Stephen Pair",
@@ -26,15 +26,19 @@
     {
       "name": "Alex Werner",
       "email": "alex.werner@dash.org"
+    },
+    {
+      "name": "GAB5TER",
+      "email": "GAB5TER@protonmail.com"
     }
   ],
   "keywords": [
-    "dash",
+    "galactrum",
     "rpc"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dashevo/dashd-rpc"
+    "url": "https://github.com/GAB5TER/galactrumd-rpc"
   },
   "license": "MIT",
   "main": "lib/index.js",
@@ -54,7 +58,7 @@
     "sinon": "^1.12.2"
   },
   "bugs": {
-    "url": "https://github.com/dashevo/dashd-rpc/issues"
+    "url": "https://github.com/GAB5TER/galactrumd-rpc/issues"
   },
-  "homepage": "https://github.com/dashevo/dashd-rpc"
+  "homepage": "https://github.com/GAB5TER/galactrumd-rpc"
 }
