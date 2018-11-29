@@ -58,7 +58,7 @@ rpc.getRawMemPool()
 Callback based (legacy):
 ```javascript
 var run = function() {
-  var galactrumCore = require('galactrum-core');
+  var orecore = require('orecore');
   var RpcClient = require('galactrumd-rpc');
   var rpc = new RpcClient(config);
 
@@ -86,7 +86,7 @@ var run = function() {
         }
 
         rawtxs.map(function (rawtx) {
-          var tx = new galactrumCore.Transaction(rawtx.result);
+          var tx = new orecore.Transaction(rawtx.result);
           console.log('\n\n\n' + tx.id + ':', tx.toObject());
         });
 
