@@ -1,5 +1,5 @@
 {
-  "name": "@GAB5TER/galactrumd-rpc",
+  "name": "galactrumd-rpc",
   "description": "Galactrum Client Library to connect to Galactrum (galactrumd) via RPC",
   "version": "1.2.1",
   "author": {
