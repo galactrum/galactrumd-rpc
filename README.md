@@ -3,11 +3,9 @@ galactrumd-rpc
 
 A client library to connect to Galactrum RPC in JavaScript.
 
-## Get Started
+## Usage
 
-galactrumd-rpc runs on [node](http://nodejs.org/):
-
-## RpcClient
+### RpcClient
 
 Config parameters : 
 
@@ -22,9 +20,10 @@ Promise vs callback based
   - `require('galacrtumd-rpc/promise')` to have promises returned
   - `require('galactrumd-rpc')` to have callback functions returned
 	
-## Examples
+### Examples
 
 Config:
+
 ```javascript
 var config = {
     protocol: 'http',
@@ -36,6 +35,7 @@ var config = {
 ```
 
 Promise based:
+
 ```javascript
 var RpcClient = require('galactrumd-rpc/promise');
 var rpc = new RpcClient(config);
@@ -52,10 +52,10 @@ rpc.getRawMemPool()
     .catch(err => {
         console.log(err)
     })
-
 ```
 
 Callback based (legacy):
+
 ```javascript
 var run = function() {
   var orecore = require('orecore');
@@ -100,9 +100,10 @@ var run = function() {
 };
 ```
 
-## Help 
+### Help
 
 You can dynamically access to the help of each method by doing
+
 ```
 const RpcClient = require('galactrumd-rpc');
 var client = new RPCclient({
@@ -116,11 +117,18 @@ var client = new RPCclient({
 var cb = function (err, data) {
     console.log(data)
 };
-client.help(cb); //Get full help
-client.help('getinfo',cb); //Get help of specific method
+
+// Get full help
+client.help(cb);
+
+// Get help of specific method
+client.help('getinfo',cb);
 ```
+
+## Contributing
+
+Feel free to dive in! [Open an issue](https://github.com/GAB5TER/galactrumd-rpc/issues/new) or submit PRs.
+
 ## License
 
-**Code released under [the MIT license](https://github.com/bitpay/bitcore/blob/master/LICENSE).**
-
-Copyright 2013-2014 BitPay, Inc.
+[MIT](LICENSE) &copy; Galactrum Development Team
